@@ -7,7 +7,7 @@ function listGoogleCalendarEvents() {
 
         jQuery.getJSON("https://www.googleapis.com/calendar/v3/calendars/p2mo3urtr8mbv1duuc1aiuukkk%40group.calendar.google.com" +
         "/events?key=AIzaSyCnWr5mHDBD5CD5lCWMDH1EUskUKrTQ1Z0&orderby=starttime&sortorder=ascending&max-results=4&futureevents=true&" +
-        "singleEvents=true&alt=json&timeMin=" + Timestamp.start(), function(data){
+        "singleEvents=false&alt=json&timeMin=" + Timestamp.start(), function(data){
 
         // Parse and render each event
         jQuery.each(data.items, function(i, item){
